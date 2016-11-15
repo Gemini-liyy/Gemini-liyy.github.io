@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>和讯-大数据</title>
+    <link rel="stylesheet" href="frameworks/bootstrap-3.3.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/index.css">
+    <script src="frameworks/jquery-2.1.4/jquery.min.js"></script>
+    <script src="frameworks/bootstrap-3.3.0-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <!--头部信息-->
+            <div class="row">
+                <div class="col-sm-2 col-xs-6">
+                    <a href="#"><img src="images/logo.png" alt="logo"></a>
+                </div>
+                <!--极小屏隐藏-->
+                <div class="col-sm-7 hidden-xs row row-text text-center">
+                    <div class="col-sm-4"><a class="active" href=".all" data-toggle="tab">全体画像</a></div>
+                    <div class="col-sm-4"><a href=".group" data-toggle="tab">群体画像</a></div>
+                    <div class="col-sm-4"><a href=".personal" data-toggle="tab">个人画像</a></div>
+                </div>
+                <div class="col-sm-3 col-xs-6 row-btn">
+                    <button class="btn btn-danger btn-sm pull-right">注册</button>
+                    <button class="btn btn-danger btn-sm pull-right">登录</button>
+                </div>
+            </div>
+            <div class="visible-xs">
+                <ul class="nav nav-tabs row  row-text-xs">
+                    <li class="col-sm-4"><a class="active" href=".all" data-toggle="tab">全体画像</a></li>
+                    <li class="col-sm-4"><a href=".group" data-toggle="tab">群体画像</a></li>
+                    <li class="col-sm-4"><a href=".group" data-toggle="tab">个人画像</a></li>
+                </ul>
+            </div>
+            <div class="row row-border visible-sm visible-md visible-lg">
+                <div class="col-sm-2 col-xs-6"></div>
+                <div class="col-sm-7 hidden-xs tab-content">
+                    <div class="col-sm-4 row-border-text tab-pane active all"></div>
+                    <div class="col-sm-4 row-border-text tab-pane group" ></div>
+                    <div class="col-sm-4 row-border-text tab-pane personal"></div>
+                </div>
+                <div class="col-sm-3 col-xs-6"></div>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane bg-warning active all"><p>全体画像是........</p></div>
+                <div class="tab-pane bg-warning group"><p>群体画像是........</p></div>
+                <div class="tab-pane bg-warning personal"><p>个人画像是........</p></div>
+            </div>
+        </div>
+        <!--小屏以上显示-->
+        <div class="hidden-xs">
+                <div class="navbar">
+                    <ul class="nav nav-tabs navbar-default">
+                        <li><a href="#">今天</a></li>
+                        <li><a href="#">最近三天</a></li>
+                        <li><a href="#">最近七天</a></li>
+                    </ul>
+                </div>
+                <div class="labels">
+                    <span>&nbsp;&nbsp;标签搜索：</span>
+                    <span class="label label-default">用户注册 <span class="glyphicon glyphicon-remove"></span></span>
+                    <span class="label label-default">高频 <span class="glyphicon glyphicon-remove"></span></span>
+                    <span class="label label-default">体育运动 <span class="glyphicon glyphicon-remove"></span></span>
+                    <button class="btn btn-warning btn-xs pull-right">重置</button>
+                    <button class="btn btn-warning btn-xs pull-right">查询</button>
+                </div>
+                <!--搜索-->
+                <form class="form-horizontal search" action="">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <!--访客过滤-->
+                            <div class="form-group row">
+                                <label class=" col-sm-2">访客过滤</label>
+                                <div class="row col-sm-10">
+                                    <div class="col-sm-2">
+                                        <select class="">
+                                            <option value="">注册类型</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <select class="">
+                                            <option value="">交易类型</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <select class="">
+                                            <option value="">所属事业部</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <select class="">
+                                            <option value="">访问频道</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--基本属性过滤-->
+                            <div class="form-group row">
+                                <label class=" col-sm-2">基本属性过滤</label>
+                                <div class="row col-sm-10">
+                                    <div class="col-sm-2">
+                                        <select class="">
+                                            <option value="">性别</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <select class="">
+                                            <option value="">年龄</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <select class="">
+                                            <option value="">星座</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <select class="">
+                                            <option value="">省份</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--忠诚度过滤-->
+                            <div class="form-group row">
+                                <label class=" col-sm-2">忠诚度过滤</label>
+                                <div class="row col-sm-10">
+                                    <div class="col-sm-2">
+                                        <select class="">
+                                            <option value="">访问时长</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <select class="">
+                                            <option value="">访问页面</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <select class="">
+                                            <option value="">访问次数</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--使用偏好过滤-->
+                            <div class="form-group row">
+                                <label class=" col-sm-2">使用偏好过滤</label>
+                                <div class="row col-sm-10">
+                                    <div class="col-sm-2">
+                                        <select class="">
+                                            <option value="">浏览器</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <select class="">
+                                            <option value="">OS</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <select class="">
+                                            <option value="">供应商</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--高级筛选-->
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#">高级筛选</a></li>
+                            </ul>
+                            <!--高级-访客过滤-->
+                            <div class="form-group row">
+                                <label class="col-sm-2">访客过滤</label>
+                                <div class="col-sm-9 row">
+                                    <div class="col-sm-2"><a href="#">全部</a></div>
+                                    <div class="col-sm-2"><a href="#">高频</a></div>
+                                    <div class="col-sm-2"><a href="#">中频</a></div>
+                                    <div class="col-sm-2"><a href="#">低频</a></div>
+                                </div>
+                                <div class="col-sm-1">
+                                    <button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-plus">多选</span></button>
+                                </div>
+                            </div>
+                            <!--访客生命周期-->
+                            <div class="form-group row">
+                                <label class="col-sm-2">访客生命周期</label>
+                                <div class="col-sm-9 row">
+                                    <div class="col-sm-2"><a href="#">全部</a></div>
+                                    <div class="col-sm-2"><a href="#">考察期</a></div>
+                                    <div class="col-sm-2"><a href="#">形成期</a></div>
+                                    <div class="col-sm-2"><a href="#">成熟期</a></div>
+                                    <div class="col-sm-2"><a href="#">衰退期</a></div>
+                                </div>
+                                <div class="col-sm-1">
+                                    <button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-plus">多选</span></button>
+                                </div>
+                            </div>
+                            <!--交易生命周期-->
+                            <div class="form-group row">
+                                <label class="col-sm-2">交易生命周期</label>
+                                <div class="col-sm-9 row">
+                                    <div class="col-sm-2"><a href="#">全部</a></div>
+                                    <div class="col-sm-2"><a href="#">考察期</a></div>
+                                    <div class="col-sm-2"><a href="#">形成期</a></div>
+                                    <div class="col-sm-2"><a href="#">成熟期</a></div>
+                                    <div class="col-sm-2"><a href="#">衰退期</a></div>
+                                </div>
+                                <div class="col-sm-1">
+                                    <button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-plus">多选</span></button>
+                                </div>
+                            </div>
+                            <!--个人长期关注点-->
+                            <div class="form-group row">
+                                <label class="col-sm-2">个人长期关注点</label>
+                                <div class="col-sm-9 row">
+                                    <div class="col-sm-2"><a href="#">全部</a></div>
+                                    <div class="col-sm-2"><a href="#">投资理财</a></div>
+                                    <div class="col-sm-2"><a href="#">股票</a></div>
+                                    <div class="col-sm-2"><a href="#">基金</a></div>
+                                    <div class="col-sm-2"><a href="#">期货</a></div>
+                                </div>
+                                <div class="col-sm-1">
+                                    <button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-plus">多选</span></button>
+                                </div>
+                            </div>
+                            <!--个人购买倾向-->
+                            <div class="form-group row">
+                                <label class="col-sm-2">个人购买倾向</label>
+                                <div class="col-sm-9 row">
+                                    <div class="col-sm-2"><a href="#">全部</a></div>
+                                    <div class="col-sm-2"><a href="#">3C产品</a></div>
+                                    <div class="col-sm-2"><a href="#">服装</a></div>
+                                    <div class="col-sm-2"><a href="#">家电</a></div>
+                                    <div class="col-sm-2"><a href="#">培训</a></div>
+                                </div>
+                                <div class="col-sm-1">
+                                    <button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-plus">多选</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="col-sm-5">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="关键字">
+                                <span class="input-group-addon">＋</span>
+                            </div>
+                            <div class="labels-hot">
+                                <span>热词搜索：</span>
+                                <span class="label label-default">潜水</span>
+                                <span class="label label-default">私募</span>
+                                <span class="label label-default">理财</span>
+                                <span class="label label-default">股票</span>
+                                <span class="label label-default">平安银行</span>
+                                <span class="label label-default">更多&gt;&gt;</span>
+                            </div>
+                            <div class="">
+                                <img class="img-responsive" src="images/tec.jpg" alt="">
+                            </div>
+                        </div>-->
+                    </div>
+                </form>
+            </div>
+        <!--极小屏显示-->
+        <div class="visible-xs">
+                <form class="">
+                    <div class="row">
+                        <div class="col-xs-3"><a data-toggle="dropdown" href="#">访客过滤<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">注册类型</a></li>
+                                <li><a href="#">交易类型</a></li>
+                                <li><a href="#">所属事业</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-3"><a data-toggle="dropdown" href="#">基本属性过滤<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">注册类型</a></li>
+                                <li><a href="#">交易类型</a></li>
+                                <li><a href="#">所属事业</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-3"><a data-toggle="dropdown" href="#">忠诚度过滤<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">注册类型</a></li>
+                                <li><a href="#">交易类型</a></li>
+                                <li><a href="#">所属事业</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-3"><a data-toggle="dropdown" href="#">使用偏号过滤<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">注册类型</a></li>
+                                <li><a href="#">交易类型</a></li>
+                                <li><a href="#">所属事业</a></li>
+                            </ul>
+                        </div>
+                        <!--<div class="col-xs-1"><a href=".more" data-toggle="tab"><span class="caret"></span></a></div>-->
+                    </div>
+                   <!-- <div class="tab-content">
+                        <div class="tab-pane more">-->
+                            <div class="form-group">
+                                <label>访问频次</label>
+                                <div class="">
+                                    <button class="btn btn-default btn-sm">全部</button>
+                                    <button class="btn btn-default btn-sm">高频</button>
+                                    <button class="btn btn-default btn-sm">中频</button>
+                                    <button class="btn btn-default btn-sm">低频</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>访问生命周期</label>
+                                <div class="">
+                                    <button class="btn btn-default btn-sm">全部</button>
+                                    <button class="btn btn-default btn-sm">考察期</button>
+                                    <button class="btn btn-default btn-sm">形成期</button>
+                                    <button class="btn btn-default btn-sm">成熟期</button>
+                                    <button class="btn btn-default btn-sm">衰退期</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>交易生命周期</label>
+                                <div class="">
+                                    <button class="btn btn-default btn-sm">全部</button>
+                                    <button class="btn btn-default btn-sm">考察期</button>
+                                    <button class="btn btn-default btn-sm">形成期</button>
+                                    <button class="btn btn-default btn-sm">成熟期</button>
+                                    <button class="btn btn-default btn-sm">衰退期</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>个人长期关注点</label>
+                                <div class="">
+                                    <button class="btn btn-default btn-sm">全部</button>
+                                    <button class="btn btn-default btn-sm">投资理财</button>
+                                    <button class="btn btn-default btn-sm">股票</button>
+                                    <button class="btn btn-default btn-sm">基金</button>
+                                    <button class="btn btn-default btn-sm">期货</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>个人购买倾向</label>
+                                <div class="">
+                                    <button class="btn btn-default btn-sm">全部</button>
+                                    <button class="btn btn-default btn-sm">3C产品</button>
+                                    <button class="btn btn-default btn-sm">服装</button>
+                                    <button class="btn btn-default btn-sm">家电</button>
+                                    <button class="btn btn-default btn-sm">培训</button>
+                                </div>
+                            </div>
+                        <!--</div>-->
+                    <!--</div>-->
+                    <div class="form-group">
+                        <button class="btn btn-warning btn-xs pull-right">查询</button>
+                        <button class="btn btn-warning btn-xs pull-right">重置</button>
+                    </div>
+                </form>
+            </div>
+        <div class="table-responsive">
+            <table class="table table-condensed table-bordered table-striped text-center table-hover">
+                <thead class="bg-warning">
+                        <tr>
+                            <th><input type="checkbox">全选</th>
+                            <th>用户ID</th>
+                            <th>性别</th>
+                            <th>注册类型</th>
+                            <th>年龄<span class="caret"></span></th>
+                            <th>访问时长<span class="caret"></span></th>
+                            <th>访问页面<span class="caret"></span></th>
+                            <th>访问次数<span class="caret"></span></th>
+                            <th>标签</th>
+                            <th>更多详情>></th>
+                        </tr>
+                    </thead>
+                <tbody>
+                    <tr>
+                                <td><input type="checkbox">1</td>
+                                <td>123456789</td>
+                                <td>女</td>
+                                <td>注册</td>
+                                <td>20</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>小股民</td>
+                                <td><span class="glyphicon glyphicon-search"></span></td>
+                            </tr>
+                    <tr>
+                                <td><input type="checkbox">2</td>
+                                <td>123456789</td>
+                                <td>男</td>
+                                <td>注册</td>
+                                <td>32</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>5</td>
+                                <td>小股民</td>
+                                <td><span class="glyphicon glyphicon-search"></span></td>
+                            </tr>
+                    <tr>
+                                <td><input type="checkbox">3</td>
+                                <td>123456789</td>
+                                <td>男</td>
+                                <td>注册</td>
+                                <td>32</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>5</td>
+                                <td>小股民</td>
+                                <td><span class="glyphicon glyphicon-search"></span></td>
+                            </tr>
+                    <tr>
+                                <td><input type="checkbox">4</td>
+                                <td>123456789</td>
+                                <td>男</td>
+                                <td>注册</td>
+                                <td>32</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>5</td>
+                                <td>小股民</td>
+                                <td><span class="glyphicon glyphicon-search"></span></td>
+                            </tr>
+                    <tr>
+                            <td><input type="checkbox">5</td>
+                            <td>123456789</td>
+                            <td>男</td>
+                            <td>注册</td>
+                            <td>32</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>5</td>
+                            <td>小股民</td>
+                            <td><span class="glyphicon glyphicon-search"></span></td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="page">
+            <div class="text-right">
+                <span>每页显示 ：<button class="btn btn-xs">10</button><button class="btn btn-xs">20</button><button class="btn btn-xs">30</button>条</span>
+                <span>共100条</span>
+                <a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+                <span>1/20</span>
+                <a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+            </div>
+        </div>
+        <div class="footer text-center">
+            <p>和讯网 大数据部|Email：bdc@sraff.hexun.com |Copyright &copy;bdc.hexun All Rights Reserved</p>
+        </div>
+
+
+        
+
+    </div>
+</body>
+</html>
